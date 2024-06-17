@@ -41,5 +41,9 @@
     <PackageReference Include="EPiServer.Find.Framework" Version="16.2.0" />
     <PackageReference Include="EPiServer.Forms" Version="5.8.2" />
   </ItemGroup>
+ 
+  <ItemGroup>
+    <Folder Include="img\" />
+  </ItemGroup>
 
 </Project>

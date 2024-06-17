@@ -83,7 +83,7 @@ namespace MP.HubSpotPush
                     }
                     catch (Exception ex)
                     {
-                        ClientIP = "1.1.1.1"; // default to a dummy IP if none can be found
+                        ClientIP = "1.0.0.0"; // default to a dummy IP if none can be found
                     }
 
                     string cookieValue = HttpRequestContext.HttpContext.Request.Cookies[HSCookieName].ToString(); // users tracking ID
