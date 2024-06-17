@@ -68,7 +68,7 @@ namespace MP.HubSpotPush
 
                 if (webhookString.StartsWith("hs://") && !PageURL.IsNullOrEmpty())
                 {
-                    // split out dealing with FORMS API and Contacts API
+
                     FormGUID = webhookString.Replace("hs://", "");
 
                     var submittedData = _formDataRepository.Service.TransformSubmissionDataWithFriendlyName(SubmissionData.Data, SubmissionFriendlyNameInfos, true).ToList();
@@ -83,10 +83,10 @@ namespace MP.HubSpotPush
                     }
                     catch (Exception ex)
                     {
-                        ClientIP = "1.0.0.0"; // default to a dummy IP if none can be found
+                        ClientIP = "1.0.0.0"; 
                     }
 
-                    string cookieValue = HttpRequestContext.HttpContext.Request.Cookies[HSCookieName].ToString(); // users tracking ID
+                    string cookieValue = HttpRequestContext.HttpContext.Request.Cookies[HSCookieName].ToString(); 
 
                     var formData = submittedData.ToDictionary(pair => pair.Key, pair => pair.Value);
 
