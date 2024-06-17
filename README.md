@@ -52,9 +52,9 @@ You need to do two things.
   });
 </script>
 ```
-6. In you Optimizely Form goto settings
-1. Add a WebHook endpoint to your form
-1. This should be set to hs:// and then the formId you copied in step 5.
+6. In your Optimizely Form, goto Settings
+7. Add a WebHook endpoint to your form
+8. This should be set to hs:// and then the formId you copied in step 5.
 
 ![image](img/webhook.png)
 
