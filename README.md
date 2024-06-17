@@ -4,7 +4,7 @@
 
 This package extends Optimizely Forms to allow for pushing a users' data directly into HubSpot CRM via a HubSpot Form.
 
-## Configuration
+## Installation & Configuration
 
 There are three steps to getting up and running.
 
