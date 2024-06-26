@@ -34,7 +34,7 @@ services.Configure<HubSpotPushOptions>(_configuration.GetSection("HubSpotPush"))
 
 ![image](img/auth.png)
 
-5. Add this Access token as a BearerToken to appSettigns
+5. Add this Access token as a BearerToken to appSettings
 ```
  "HubSpotPush": {
    "BearerToken": "pat-xxx-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx"
