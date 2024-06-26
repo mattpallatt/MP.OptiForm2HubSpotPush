@@ -4,7 +4,7 @@
 
 This package extends Optimizely Forms to allow for pushing a users' data directly into HubSpot CRM via a HubSpot Form.
 
-## Configuration
+## Installation & Configuration
 
 There are three steps to getting up and running.
 
@@ -56,18 +56,18 @@ You need to do two things.
 1. Click Embed, then select the option for Embdedded code
 1. You will see a block of JavaScript with a formId - copy this!
 ```
-<script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+<script charset="utf-8" type="text/javascript" src="//js-xx1.hsforms.net/forms/embed/v2.js"></script>
 <script>
   hbspt.forms.create({
     region: "xxx",
     portalId: "xxxxxxxxxx",
-    formId: "595073bc-4680-4d73-8744-8d1fc417a062"
+    formId: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
   });
 </script>
 ```
-6. In you Optimizely Form goto settings
-1. Add a WebHook endpoint to your form
-1. This should be set to hs:// and then the formId you copied in step 5.
+6. In your Optimizely Form, goto Settings
+7. Add a WebHook endpoint to your form
+8. This should be set to hs:// and then the formId you copied in step 5.
 
 ![image](img/webhook.png)
 
