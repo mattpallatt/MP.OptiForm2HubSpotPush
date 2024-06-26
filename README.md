@@ -21,7 +21,20 @@ services.Configure<HubSpotPushOptions>(_configuration.GetSection("HubSpotPush"))
 
 ## Update appSettings.json 
 
-Add the following to your appSettigns
+1. Log into HubSpot
+2. Use the cog in the top right to enter settings
+
+![image](img/settings.png)
+
+3. Then go to Private Apps
+
+![image](img/privateapps.png)
+
+4. Here you can go to an existing app, or create a new one - either way, you should then navigate to the Auth tab, and take a copy of your apps Access token. Ensure that your app is scoped to use "forms".
+
+![image](img/auth.png)
+
+5. Add this Access token as a BearerToken to appSettigns
 ```
  "HubSpotPush": {
    "BearerToken": "pat-xxx-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx"

@@ -15,8 +15,7 @@ using System.Net.Http.Headers;
 using System.Net.Sockets;
 using System.Text;
 
-
-namespace MP.HubSpotPush
+namespace MP.OptiForm2HubSpotPush
 {
 
     public class HubspotSubmissionActor : PostSubmissionActorBase
@@ -29,16 +28,15 @@ namespace MP.HubSpotPush
         private string PortalId = "";
         private string ClientIP = "";
 
-        private string HSFormsEndPoint = "https://api.hsforms.com/submissions/v3/integration/submit";
-        private string HSAPIEndPoint = "https://api.hubapi.com/forms/v2/forms";
-        private string HSCookieName = "hubspotutk";
+        private readonly string HSFormsEndPoint = "https://api.hsforms.com/submissions/v3/integration/submit";
+        private readonly string HSAPIEndPoint = "https://api.hubapi.com/forms/v2/forms";
+        private readonly string HSCookieName = "hubspotutk";
 
         public override object Run(object input)
         {
             var options = _options.Service.Value;
 
-            if (options.BearerToken != null) { HSBearerToken = options.BearerToken; } else { return null; }
-            if (options.HSCookieName != null) { HSCookieName = options.HSCookieName; }
+            if (options.BearerToken != null) { HSBearerToken = options.BearerToken; } else { return string.Empty; ; }
 
             var submission = SubmissionData;
 
@@ -76,12 +74,12 @@ namespace MP.HubSpotPush
                     try
                     {
                         string strHostName = Dns.GetHostName();
-                        IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());
+                        IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
                         IPAddress ipAddress = ipHostInfo.AddressList.FirstOrDefault(a => a.AddressFamily == AddressFamily.InterNetwork);
 
                         ClientIP = ipAddress?.ToString();
                     }
-                    catch (Exception ex)
+                    catch
                     {
                         ClientIP = "1.0.0.0"; 
                     }
@@ -134,7 +132,7 @@ namespace MP.HubSpotPush
 
                     }
                 }
-                catch (Exception ex)
+                catch
                 {
 
                 }
@@ -209,7 +207,7 @@ namespace MP.HubSpotPush
 
                     }
                 }
-                catch (Exception ex)
+                catch
                 {
 
                 }

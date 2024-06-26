@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Title>MP.OptiForm2HubSpotPush</Title>
+    <PackageId>MP.OptiForm2HubSpotPush</PackageId>
+    <Authors>
+    </Authors>
+    <Version>1.0.1</Version>
+    <Description>This package extends Optimizely Forms to allow for pushing a users' data directly into HubSpot CRM via a HubSpot Form.</Description>
+    <PackageTags>Optimizely, HubSpot, CRM</PackageTags>
+    <PackageProjectUrl>https://github.com/mattpallatt/MP.OptiForm2HubSpotPush</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mattpallatt/MP.OptiForm2HubSpotPush</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <RepositoryType>git</RepositoryType>
+    <AssemblyVersion></AssemblyVersion>
+    <FileVersion></FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPiServer.Forms" Version="5.8.2" />
+    <PackageReference Include="EPiServer.CMS.UI.Core" Version="12.22.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
